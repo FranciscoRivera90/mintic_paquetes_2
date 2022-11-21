@@ -1,0 +1,21 @@
+.btn-a{
+    background-color: blue;
+    color: aliceblue;
+    border: 1px solid aliceblue;
+    padding: 25px;
+    width: 120px;
+    height: 80px;
+    text-decoration: none;
+}
+
+.btn-button{
+    background-color: blue;
+    color: aliceblue;
+    border: 1px solid aliceblue;
+    border-radius: 15px;
+    padding: 25px;
+    width: 120px;
+    height: 80px;
+    text-decoration: none;
+}
+

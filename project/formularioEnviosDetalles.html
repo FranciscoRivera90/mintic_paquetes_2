@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="./Img/icono.png">
+</head>
+<body class="p-3 m-0 border-0 bd-example" style="background-color: #f9f9f9;">
+    <header>
+        <div class="container">
+            <a href="./historial.html">
+                <img src="img/tmg.png" class="logo" >
+            </a>
+        </div>
+    </header>
+    <h1 style="align-self:center; text-align: center; margin-bottom: 2%; margin-top: 2%;">
+        Formulario de envios
+    </h1>
+    <form class="row g-3 needs-validation" style="align-content: center; justify-content: center;" id="formularioDetalles" novalidate>
+      <div class="col-5" style="padding: 10px; padding-bottom: 30px; padding-top: 30px; margin-left: 1%; margin-right: 2%; border-radius: 20px; box-shadow: 0 0 8px #00000047; background-color: white;">
+        <h3 style="align-self:center; text-align: center;">Remitente</h3>
+
+        <div class="col">
+          <label for="inputEmail4" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="inputEmail4R" name="nombreR" required>
+        </div>
+        <div class="col">
+          <label for="inputPassword4" class="form-label">Cedula</label>
+          <input type="text" class="form-control" id="inputPassword4R" name="cedulaR" required>
+        </div>
+        <div class="col">
+            <label for="City" class="form-label">Ciudad</label>
+            <input type="text" class="form-control" id="CityR" name="ciudadR" required>
+        </div>
+        <div class="col">
+            <label for="Address" class="form-label">Dirección</label>
+            <input type="text" class="form-control" id="AddressR" name="direccionR" required>
+          </div>
+          <div class="col">
+            <label for="Phone" class="form-label">Teléfono</label>
+            <input type="text" class="form-control" id="PhoneR" name="telefonoR" required>
+          </div>
+        </div>
+        <div class="col-5" style="padding: 10px; padding-bottom: 30px; padding-top: 30px; border-radius: 20px; box-shadow: 0 0 8px #00000047; margin-right: 1%; background-color: white;">
+            <h3 style="align-self:center; text-align: center;">Destinatario</h3>
+            <div class="col">
+              <label for="inputEmail4" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="inputEmail4D" name="nombreD" required>
+            </div>
+            <div class="col">
+              <label for="inputPassword4" class="form-label">Cedula</label>
+              <input type="text" class="form-control" id="inputPassword4D" name="cedulaD" required>
+            </div>
+            <div class="col">
+                <label for="City" class="form-label">Ciudad</label>
+                <input type="text" class="form-control" id="CityD" name="ciudadD" required>
+            </div>
+            <div class="col">
+                <label for="Address" class="form-label">Dirección</label>
+                <input type="text" class="form-control" id="AddressD" name="direccionD" required>
+              </div>
+              <div class="col">
+                <label for="Phone" class="form-label">Teléfono</label>
+                <input type="text" class="form-control" id="PhoneD" name="telefonoD" required>
+              </div>
+            </div>
+            <div class="col-12" style="padding: 10px; padding-bottom: 30px; padding-top: 30px; border-radius: 20px; box-shadow: 0 0 8px #00000047; width: 85%;margin-top: 2%; background-color: white;">
+                <div class="col">
+                  <label for="Value" class="form-label">Valor</label>
+                  <input type="text" class="form-control" id="Value" name="valorEnvio" required>
+                </div>
+                <div class="col">
+                  <label for="Date" class="form-label">Fecha de envio</label>
+                  <input type="text" class="form-control" id="Date" name="fechaEnvio" required>
+                </div>
+                <div class="col">
+                  <label for="package" class="form-label">Tipo de paquete</label>
+                    <select class="form-select" id="package" aria-label="Default select example" placeholder="Seleccione una opcion" required>
+                        <option value="1">Pequeño</option>
+                        <option value="2">Mediano</option>
+                        <option value="3">Grande</option>
+                    </select>
+                </div>
+                </div>
+
+        <!--Botón Siguiente-->
+        <div class="col-12" style="align-content: center; justify-content: center; display: flex;" id="nextButton">
+          <a href="#" style="width: 20vw; margin-top: 2%; margin-bottom: 2%;" class="btn btn-primary" onclick="crearEnvio()">Siguiente</a>
+        </div>
+        <!--End Botón Siguiente-->
+
+        <!--Botón Actualizar-->
+        <div class="col-12" style="align-content: center; justify-content: center; display: flex;" id="updateButton">
+          <a href="#" style="width: 20vw; margin-top: 2%; margin-bottom: 2%;" class="btn btn-primary" onclick="actualizarRegistro()">Actualizar</a>
+        </div>
+        <!--End Botón Actualizar-->
+    </form>
+    <div class="valid-tooltip">¡Campo válido!</div>
+    <div class="invalid-tooltip">Debe completar los datos.</div>
+</body>
+<!--Importación de FireBase-->
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+<!--Importación de Scripts Propios-->
+<script src="./configuracion.js" ></script>
+<script src="./crud.js"></script>
+
+<script>
+  if(window.localStorage.getItem('caseFunction') != 3){
+
+    if(window.localStorage.getItem('caseFunction') == 1){
+      visualizarDetalleEnvio(window.localStorage.getItem('id'));
+      document.getElementById("nextButton").hidden = true;
+      document.getElementById("updateButton").hidden = true;
+
+      //Deshabilitar la ediciión en los input
+      document.getElementById("inputEmail4R").disabled = true;
+      document.getElementById("inputPassword4R").disabled = true;
+      document.getElementById("CityR").disabled = true;
+      document.getElementById("AddressR").disabled = true;
+      document.getElementById("PhoneR").disabled = true;
+      document.getElementById("inputEmail4D").disabled = true;
+      document.getElementById("CityD").disabled = true;
+      document.getElementById("AddressD").disabled = true;
+      document.getElementById("PhoneD").disabled = true;
+      document.getElementById("Value").disabled = true;
+      document.getElementById("Date").disabled = true;
+      document.getElementById("package").disabled = true;
+      document.getElementById("inputPassword4D").disabled = true;
+      //End Deshabilitar la ediciión en los input
+    }else{
+      visualizarDetalleEnvio(window.localStorage.getItem('id'));
+      document.getElementById("nextButton").hidden = true;
+    }
+
+  }else{
+    document.getElementById("updateButton").hidden = true;
+  }
+</script>
+
+</html>

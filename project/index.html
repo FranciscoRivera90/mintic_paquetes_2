@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>TMG TransmultiGlobal s.a.s</title>
+        <link rel="stylesheet" href="./css/visual.css">
+        <link rel="icon" href="./Img/icono.png">
+    </head>
+    <body>
+        <div style="text-align:center">
+            <img src="./Img/tmg.png" width="20%"/>
+        </div>
+        
+        <div style="text-align:center">
+            <h1>BIENVENIDOS</h1>
+        </div>
+
+        <div style="text-align:center">
+            <button class="btn-button" onclick="location.href='./historial.html'">Historial de Envíos</button>
+        </div>
+        
+        <div style="text-align:center">
+            <button class="btn-button" style="margin-top: 20px;" onclick='capturaridRegistro("nuevo_registro", 3)''>Cotizar Envíos</button>
+        </div>
+    </body>
+
+    <!--Importación de FireBase-->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <!--Importación de Scripts Propios-->
+    <script src="./configuracion.js" ></script>
+    <script src="./crud.js"></script>
+</html>

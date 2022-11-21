@@ -1,0 +1,65 @@
+#busqueda
+{
+    padding-left: 0%;
+    margin-top: 20px;
+    margin-left: 0px;
+    margin-bottom: 50px;
+}
+.guia
+{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: auto; 
+    width: 230px;
+    
+}
+.label-guia
+{
+    padding: 2px;     
+    margin-left: 35px;
+    margin-top: 5px;
+    width: 150px;
+    margin-bottom:5px;    
+    text-align: center;
+    font-size: 15px;
+    font-family:inherit;
+}
+.boton_nueva
+{   
+    border-radius: 15px;
+    color: aliceblue;   
+    margin-top: 5px; 
+    width: 200px;
+    
+}
+
+.boton_buscar 
+{
+
+    margin-top: 5px;
+    margin-left: 50px; 
+    margin-right: 4; 
+}
+.imagen
+{
+   width: 13pt;
+   ;
+   
+}
+
+.logo
+{
+    width: 150px; 
+    margin-top: 10px;
+}
+th
+{
+    font-size:medium;
+}
+
+td
+{
+    font-size:15px;
+}
+
+
