@@ -1,0 +1,22 @@
+from fastapi import FastAPI
+from pydantic import BaseModel
+from uuid import uuid4
+
+app = FastAPI()
+
+#Servicio 1
+@app.get("/saludo")
+async def root():
+    return {"message": "Hola MisiónTIC 2022"}
+
+#Servicio 2
+@app.get("/usuarios/{user_id}")
+async def read_user(user_id: int):
+    return {'user_id': user_id}
+
+#Servicio 3
+cursos = [{"curso": "Fundamentos de Programación"}, {"curso": "Programación Básica"}, {"curso": "Desarrollo de Software"}, {"curso": "Desarrollo Apps Web"}]
+
+@app.get("/cursos/")
+async def read_item(skip: int = 0, limit: int = 10):
+    return cursos[skip: skip + limit]
