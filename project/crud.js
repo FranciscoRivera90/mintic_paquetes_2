@@ -1,6 +1,6 @@
 var hasError = false
 var alertTrigger = false
-
+//
 function validation(){
     var emailR =document.getElementById("inputEmail4R").value;
     var passR =document.getElementById("inputPassword4R").value;
